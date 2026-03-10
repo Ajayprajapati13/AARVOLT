@@ -226,6 +226,105 @@ header {
   font-size: 13px;
 }
 
+.form-title {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a2c6a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.complaint-form {
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.complaint-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 123, 255, 0.25);
+}
+
+.complaint-form label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.complaint-form input:focus,
+.complaint-form select:focus,
+.complaint-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.complaint-form textarea {
+  resize: vertical;
+}
+
+.complaint-form button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.complaint-form button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.05);
+}
+
+
+.support-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.support-link:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+}
+
+.support-link:active {
+  transform: scale(0.97);
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
@@ -417,4 +516,50 @@ header {
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.1)
     );
+}
+
+
+
+/* Mobile responsiveness for Query Form */
+@media (max-width: 768px) {
+  .complaint-form {
+    max-width: 90%;          /* keep form centered */
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .complaint-form input,
+  .complaint-form select,
+  .complaint-form textarea {
+    width: 100%;             /* fill parent width */
+    max-width: 100%;         /* prevent overflow */
+    box-sizing: border-box;  /* include padding/border in width */
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .complaint-form button {
+    width: 100%;             /* full-width button for easy tap */
+    font-size: 15px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .complaint-form {
+    max-width: 95%;          /* narrower on very small screens */
+    padding: 15px;
+  }
+
+  .complaint-form input,
+  .complaint-form select,
+  .complaint-form textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .complaint-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
 }
